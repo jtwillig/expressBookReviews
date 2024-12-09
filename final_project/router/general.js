@@ -61,7 +61,7 @@ const getBooksByAuthor = async (author) => {
   return res.data;
 }
 
-const getBookByTitle = async (title) => {
+const getBooksByTitle = async (title) => {
   const res = await axios.get(`http://localhost:5000/title/${title}`)
   return res.data;
 }
@@ -74,8 +74,8 @@ const getBookByTitle = async (title) => {
   console.log({bookByISBN});
   const booksByAuthor = await getBooksByAuthor('Unknown');
   console.log({booksByAuthor});
-  const bookByTitle = await getBookByTitle('Pride and Prejudice');
-  console.log({bookByTitle});
+  const booksByTitle = await getBooksByTitle('Pride and Prejudice');
+  console.log({booksByTitle});
 }
 
 void testAxiosRequests();*/
